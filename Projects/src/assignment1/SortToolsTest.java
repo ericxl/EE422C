@@ -32,7 +32,7 @@ public class SortToolsTest {
         assertTrue(SortTools.isSorted(eighth, 1));
     }
 
-    @Test // (timeout = 2000)
+    @Test (timeout = 2000)
     public void testFind() {
         int[] first = {1, 2, 3};
         assertEquals(2, SortTools.find(first, 3, 3));
@@ -66,7 +66,7 @@ public class SortToolsTest {
         assertEquals(-1, SortTools.find(sixth, 0, -53));
     }
 
-    @Test
+    @Test(timeout = 2000)
     public void testInsertGeneral() {
         int[] a1 = {1, 2, 3};
         int[] r1 = SortTools.insertGeneral(a1, 3, 2);
@@ -85,7 +85,7 @@ public class SortToolsTest {
         assertArrayEquals(new int[]{-33, 1, 2}, r5);
     }
 
-    @Test
+    @Test(timeout = 2000)
     public void testInsertInPlace() {
         int[] a1 = {1, 2, 3};
         int r1 = SortTools.insertInPlace(a1, 3, 7);
@@ -93,7 +93,7 @@ public class SortToolsTest {
         assertEquals(4, r1);
     }
 
-    @Test
+    @Test(timeout = 2000)
     public void testInsertSort() {
         int[] a1 = {1, 2, 3};
         SortTools.insertSort(a1, 3);
