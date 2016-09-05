@@ -9,6 +9,10 @@
  */
 package assignment1;
 
+import java.util.Arrays;
+
+import static java.util.Arrays.*;
+
 /**
  * This is the SortTools class for assignment 1
  *
@@ -96,15 +100,53 @@ public class SortTools {
             return new int[]{v};
         }
 
-        int originalArrayCopyIndex = 0;
         int newArrayIndex = 0;
         int[] newArray = new int[n + 1];
 
-        int i = 0;
-        while (originalArrayCopyIndex < newArray.length) {
+        boolean shouldInsert = true;
+        boolean inserted = false;
+        for (int i = 0; i < n; i++) {
+            if (i == n - 1) {
+                if (shouldInsert) {
+                    if(inserted){
+                        newArray[newArrayIndex] = x[i];
+                    }else {
+                        newArray[newArrayIndex] = v;
+                        newArray[newArrayIndex + 1] = x[i];
+                        inserted = true;
+                    }
+                } else {
+                    newArray[newArrayIndex] = x[i];
+                }
+            }
 
+            if(x[i] > v ){
+                if(inserted){
+                    newArray[newArrayIndex] = x[i];
+                    newArrayIndex ++;
+                } else{
+                    newArray[newArrayIndex] = v;
+                    newArrayIndex ++;
+                    newArray[newArrayIndex] = x[i];
+                    newArrayIndex++;
+                    inserted = true;
+                }
+
+            } else if(x[i] == v){
+                shouldInsert = false;
+                newArray[newArrayIndex] = x[i];
+                newArrayIndex ++;
+            }else {
+                newArray[newArrayIndex] = x[i];
+                newArrayIndex ++;
+            }
         }
-        return null;
+        if (inserted){
+            return newArray;
+        } else{
+            return Arrays.copyOf(newArray, newArray.length -1 );
+        }
+
     }
 
     /**
@@ -116,24 +158,55 @@ public class SortTools {
      * @return
      */
     public static int insertInPlace(int[] x, int n, int v) {
-        boolean checked = false;
+        if(n == 0) {
+            if(x[0] != v) {
+                x[0] = v;
+                return n + 1;
+            } else {
+                return n;
+            }
+        }
+
+        boolean shouldInsert = true;
         int dashed = v;
+        boolean pop = false;
         for (int i = 0; i < n; i++) {
             if (i == n - 1) {
-                if (!checked) {
-                    return n;
+                if (shouldInsert) {
+                    if(x[i] == dashed && dashed == v){
+                        return n;
+                    }
+
+                    if(x[i] < dashed){
+                        x[i+1] = dashed;
+                    } else if(x[i] >= dashed){
+                        int temp = x[i];
+                        x[i] = dashed;
+                        x[i + 1] = temp;
+                    }
+
+                    return n + 1;
                 } else {
-                    x[n] = v;
+                    return n;
                 }
+            }
+
+            if(pop){
+                int temp = x[i];
+                x[i] = dashed;
+                dashed = temp;
             }
 
             if(x[i] > dashed ){
                 int temp = x[i];
                 x[i] = dashed;
                 if(dashed == v){
-                    checked = true;
+                    shouldInsert = true;
                 }
                 dashed = temp;
+                pop = true;
+            } else if(x[i] == dashed){
+                shouldInsert = false;
             }
         }
         return n+1;
