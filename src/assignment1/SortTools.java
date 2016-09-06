@@ -11,8 +11,6 @@ package assignment1;
 
 import java.util.Arrays;
 
-import static java.util.Arrays.*;
-
 /**
  * This is the SortTools class for assignment 1
  *
@@ -21,7 +19,6 @@ import static java.util.Arrays.*;
 public class SortTools {
     /**
      * This method tests to see if the given array is sorted.
-     *
      * @param x is the array
      * @param n is the size of the input to be checked
      * @return true if array is sorted
@@ -29,14 +26,17 @@ public class SortTools {
     public static boolean isSorted(int[] x, int n) {
         if (x == null)
             return false;
-        int len = n;
-        if (x.length < len) {
-            len = x.length;
+        if (n <= 0) {
+            return false;
         }
-        if (len <= 1) {
-            return true;
+        if (n > x.length) {
+            return false;
         }
-        for (int i = 1; i < len; i++) {
+        if (x.length == 0) {
+            return false;
+        }
+
+        for (int i = 1; i < n; i++) {
             if (x[i - 1] > x[i]) {
                 return false;
             }
@@ -46,7 +46,6 @@ public class SortTools {
 
     /**
      * Finds an element in array
-     *
      * @param x
      * @param n
      * @param v
@@ -89,6 +88,13 @@ public class SortTools {
         return -1;
     }
 
+    /**
+     * Insert an element into an array
+     * @param x is the array.
+     * @param n is the number of elements to be checked.
+     * @param v is the value to be inserted.
+     * @return
+     */
     public static int[] insertGeneral(int[] x, int n, int v) {
         if (x == null)
             return new int[]{v};
@@ -105,43 +111,36 @@ public class SortTools {
         int newIndex = 0;
         boolean inserted = false;
         for (int i = 0; i < n; i++) {
-            if(x[i] > v){
-                if(shouldInsert && !inserted){
+            if (x[i] > v) {
+                if (shouldInsert && !inserted) {
                     newArray[newIndex] = v;
-                    newIndex ++;
+                    newIndex++;
                     newArray[newIndex] = x[i];
                     inserted = true;
-                }
-                else{
+                } else {
                     newArray[newIndex] = x[i];
                 }
-            }
-            else if(x[i] == v){
+            } else if (x[i] == v) {
                 shouldInsert = false;
                 inserted = false;
                 newArray[newIndex] = x[i];
-            }
-            else {
+            } else {
                 newArray[newIndex] = x[i];
             }
 
-            newIndex ++;
+            newIndex++;
         }
 
 
-
-        if (inserted){
+        if (inserted) {
             return newArray;
-        } else{
-            if(shouldInsert){
+        } else {
+            if (shouldInsert) {
                 newArray[newIndex] = v;
                 return newArray;
+            } else {
+                return Arrays.copyOf(newArray, newArray.length - 1);
             }
-            else{
-                return Arrays.copyOf(newArray, newArray.length -1 );
-            }
-
-
 
 
         }
@@ -150,15 +149,14 @@ public class SortTools {
 
     /**
      * Inserts v into array for the first n elements.
-     *
      * @param x is the array to be inserted.
      * @param n is the number of elements to be inserted into.
      * @param v is the value to be inserted.
-     * @return
+     * @return the length of the inserted array.
      */
     public static int insertInPlace(int[] x, int n, int v) {
-        if(n == 0) {
-            if(x[0] != v) {
+        if (n == 0) {
+            if (x[0] != v) {
                 x[0] = v;
                 return n + 1;
             } else {
@@ -172,13 +170,13 @@ public class SortTools {
         for (int i = 0; i < n; i++) {
             if (i == n - 1) {
                 if (shouldInsert) {
-                    if(x[i] == dashed && dashed == v){
+                    if (x[i] == dashed && dashed == v) {
                         return n;
                     }
 
-                    if(x[i] < dashed){
-                        x[i+1] = dashed;
-                    } else if(x[i] >= dashed){
+                    if (x[i] < dashed) {
+                        x[i + 1] = dashed;
+                    } else if (x[i] >= dashed) {
                         int temp = x[i];
                         x[i] = dashed;
                         x[i + 1] = temp;
@@ -190,25 +188,25 @@ public class SortTools {
                 }
             }
 
-            if(pop){
+            if (pop) {
                 int temp = x[i];
                 x[i] = dashed;
                 dashed = temp;
             }
 
-            if(x[i] > dashed ){
+            if (x[i] > dashed) {
                 int temp = x[i];
                 x[i] = dashed;
-                if(dashed == v){
+                if (dashed == v) {
                     shouldInsert = true;
                 }
                 dashed = temp;
                 pop = true;
-            } else if(x[i] == dashed){
+            } else if (x[i] == dashed) {
                 shouldInsert = false;
             }
         }
-        return n+1;
+        return n + 1;
     }
 
     /**
