@@ -70,20 +70,65 @@ public class SortToolsTest {
     @Test(timeout = 2000)
     public void testInsertGeneral() {
         int[] a1 = {1, 2, 3};
-        int[] r1 = SortTools.insertGeneral(a1, 3, 2);
-        assertArrayEquals(a1, r1);
 
-        int[] r2 = SortTools.insertGeneral(a1, 3, 4);
-        assertArrayEquals(new int[]{1, 2, 3, 4}, r2);
+        int[] r2 = SortTools.insertGeneral(a1, 33, 3);
+        assertArrayEquals(new int[]{1, 2, 3}, r2);
 
         int[] r3 = SortTools.insertGeneral(a1, 3, 0);
         assertArrayEquals(new int[]{0, 1, 2, 3}, r3);
 
-        int[] r4 = SortTools.insertGeneral(a1, 2, 99);
-        assertArrayEquals(new int[]{1, 2, 99}, r4);
+        int[] r1 = SortTools.insertGeneral(a1, 3, 2);
+        assertArrayEquals(a1, r1);
+
+        int[] r4 = SortTools.insertGeneral(a1, 3, 99);
+        assertArrayEquals(new int[]{1, 2, 3, 99}, r4);
 
         int[] r5 = SortTools.insertGeneral(a1, 2, -33);
         assertArrayEquals(new int[]{-33, 1, 2}, r5);
+
+        int[] a2 = {-99, -80, -1, 0, 1, 9, 88, 100, 200};
+        int[] r6 = SortTools.insertGeneral(a2, a2.length, 5);
+        assertArrayEquals(new int[]{-99, -80, -1, 0, 1, 5, 9, 88, 100, 200}, r6);
+
+        int[] r7 = SortTools.insertGeneral(a2, a2.length, -133);
+        assertArrayEquals(new int[]{-133, -99, -80, -1, 0, 1,9, 88, 100, 200}, r7);
+
+        int[] r8 = SortTools.insertGeneral(a2, a2.length, 233);
+        assertArrayEquals(new int[]{-99, -80, -1, 0, 1,9, 88, 100, 200, 233}, r8);
+
+        int[] r9 = SortTools.insertGeneral(a2, a2.length, 0);
+        assertArrayEquals(new int[]{-99, -80, -1, 0, 1,9, 88, 100, 200}, r9);
+
+        int[] r10 = SortTools.insertGeneral(a2, 3, -100);
+        assertArrayEquals(new int[]{-100, -99, -80, -1}, r10);
+
+        int[] r11 = SortTools.insertGeneral(a2, 3, 300);
+        assertArrayEquals(new int[]{-99, -80, -1, 300}, r11);
+
+        int[] r12 = SortTools.insertGeneral(a2, 3, 0);
+        assertArrayEquals(new int[]{-99, -80, -1, 0}, r12);
+
+        int[] a3 = {11,22,22,22, 33};
+        int[] r13 = SortTools.insertGeneral(a3, 3, 11);
+        assertArrayEquals(new int[]{11,22,22}, r13);
+
+        int[] r14 = SortTools.insertGeneral(a3, 3, 7);
+        assertArrayEquals(new int[]{7,11,22,22}, r14);
+
+        int[] r15 = SortTools.insertGeneral(a3, 3, 44);
+        assertArrayEquals(new int[]{11,22, 22,44}, r15);
+
+        int[] r16 = SortTools.insertGeneral(a3, a3.length, 44);
+        assertArrayEquals(new int[]{11,22, 22,22,33, 44}, r16);
+
+        int[] r17 = SortTools.insertGeneral(a3, a3.length, 22);
+        assertArrayEquals(new int[]{11,22, 22,22,33}, r17);
+
+        int[] r18 = SortTools.insertGeneral(a3, 1, 22);
+        assertArrayEquals(new int[]{11,22}, r18);
+
+        int[] r19 = SortTools.insertGeneral(a3, 2, 22);
+        assertArrayEquals(new int[]{11,22}, r19);
     }
 
     @Test(timeout = 2000)
@@ -147,6 +192,11 @@ public class SortToolsTest {
         int r12 = SortTools.insertInPlace(a12, 0, 3);
         assertArrayEquals(new int[]{3}, a12);
         assertEquals(0, r12);
+
+        int[] a13 = {1,3,5,0};
+        int r13 = SortTools.insertInPlace(a13, 3, 0);
+        assertArrayEquals(new int[]{0,1,3,5}, a13);
+        assertEquals(4, r13);
     }
 
     @Test(timeout = 2000)

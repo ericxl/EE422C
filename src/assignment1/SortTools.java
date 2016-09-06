@@ -92,59 +92,58 @@ public class SortTools {
     public static int[] insertGeneral(int[] x, int n, int v) {
         if (x == null)
             return new int[]{v};
-        int len = n;
-        if (x.length < len) {
-            len = x.length;
+        if (x.length < n) {
+            n = x.length;
         }
-        if (len <= 0) {
+        if (n == 0) {
             return new int[]{v};
         }
 
-        int newArrayIndex = 0;
         int[] newArray = new int[n + 1];
 
         boolean shouldInsert = true;
+        int newIndex = 0;
         boolean inserted = false;
         for (int i = 0; i < n; i++) {
-            if (i == n - 1) {
-                if (shouldInsert) {
-                    if(inserted){
-                        newArray[newArrayIndex] = x[i];
-                    }else {
-                        newArray[newArrayIndex] = v;
-                        newArray[newArrayIndex + 1] = x[i];
-                        inserted = true;
-                    }
-                } else {
-                    newArray[newArrayIndex] = x[i];
-                }
-            }
-
-            if(x[i] > v ){
-                if(inserted){
-                    newArray[newArrayIndex] = x[i];
-                    newArrayIndex ++;
-                } else{
-                    newArray[newArrayIndex] = v;
-                    newArrayIndex ++;
-                    newArray[newArrayIndex] = x[i];
-                    newArrayIndex++;
+            if(x[i] > v){
+                if(shouldInsert && !inserted){
+                    newArray[newIndex] = v;
+                    newIndex ++;
+                    newArray[newIndex] = x[i];
                     inserted = true;
                 }
-
-            } else if(x[i] == v){
-                shouldInsert = false;
-                newArray[newArrayIndex] = x[i];
-                newArrayIndex ++;
-            }else {
-                newArray[newArrayIndex] = x[i];
-                newArrayIndex ++;
+                else{
+                    newArray[newIndex] = x[i];
+                }
             }
+            else if(x[i] == v){
+                shouldInsert = false;
+                inserted = false;
+                newArray[newIndex] = x[i];
+            }
+            else {
+                newArray[newIndex] = x[i];
+            }
+
+            newIndex ++;
         }
+
+
+
         if (inserted){
             return newArray;
         } else{
-            return Arrays.copyOf(newArray, newArray.length -1 );
+            if(shouldInsert){
+                newArray[newIndex] = v;
+                return newArray;
+            }
+            else{
+                return Arrays.copyOf(newArray, newArray.length -1 );
+            }
+
+
+
+
         }
 
     }
