@@ -71,6 +71,9 @@ public class SortToolsTest {
         assertEquals(0, SortTools.find(sixth, 4, -53));
         assertEquals(0, SortTools.find(sixth, 1, -53));
         assertEquals(-1, SortTools.find(sixth, 0, -53));
+
+        int[] x = new int[]{2, 4, 6, 8, 10};
+        assertEquals(0, SortTools.find(x, 4, 2));
     }
 
     @Test(timeout = 2000)
