@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="853ee0d0-f0b9-483b-a807-510e1f159b4a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assignment2/Peg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assignment2/Board.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assignment2/GameTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment2/Driver.java" afterPath="$PROJECT_DIR$/src/assignment2/Driver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment2/Game.java" afterPath="$PROJECT_DIR$/src/assignment2/Game.java" />
     </list>
     <ignored path="EE422C.iws" />
@@ -50,22 +50,30 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assignment2/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
+            <state relative-caret-position="240">
+              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment2/GameTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#398#399#0" expanded="true" />
-                <element signature="e#429#430#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SecretCodeGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assignment2/SecretCodeGenerator.java">
+      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment2/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+            <state relative-caret-position="270">
+              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -84,11 +92,9 @@
       <file leaf-file-name="GameConfiguration.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assignment2/GameConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="105">
               <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#369#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,6 +131,8 @@
         <option value="$PROJECT_DIR$/src/assignment2/GameConfiguration.java" />
         <option value="$PROJECT_DIR$/src/assignment2/Driver.java" />
         <option value="$PROJECT_DIR$/src/assignment2/Peg.java" />
+        <option value="$PROJECT_DIR$/src/assignment2/GameTest.java" />
+        <option value="$PROJECT_DIR$/src/assignment2/Board.java" />
         <option value="$PROJECT_DIR$/src/assignment2/Game.java" />
       </list>
     </option>
@@ -143,10 +151,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1440" />
     <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1057" />
+    <option name="width" value="1440" />
+    <option name="height" value="832" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -174,11 +181,78 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EE422C" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EE422C" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EE422C" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EE422C" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EE422C" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EE422C" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EE422C" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assignment2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EE422C" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EE422C" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assignment1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -205,84 +279,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Driver">
-    <configuration default="false" name="SortToolsTest.testFind" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="assignment1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="EE422C" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="assignment1" />
-      <option name="MAIN_CLASS_NAME" value="assignment1.SortToolsTest" />
-      <option name="METHOD_NAME" value="testFind" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="SelectionSortTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="quiz2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="EE422C" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="quiz2" />
-      <option name="MAIN_CLASS_NAME" value="quiz2.SelectionSortTest" />
-      <option name="METHOD_NAME" value="test2" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="SelectionSortTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="quiz2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="EE422C" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="quiz2" />
-      <option name="MAIN_CLASS_NAME" value="quiz2.SelectionSortTest" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="SelectionSortTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -327,6 +323,84 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="EE422C" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="GameTest.testGeneratePeg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="assignment2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="EE422C" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="assignment2" />
+      <option name="MAIN_CLASS_NAME" value="assignment2.GameTest" />
+      <option name="METHOD_NAME" value="testGeneratePeg" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="GameTest.testGeneratePeg2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="assignment2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="EE422C" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="assignment2" />
+      <option name="MAIN_CLASS_NAME" value="assignment2.GameTest" />
+      <option name="METHOD_NAME" value="testGeneratePeg2" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="GameTest.testGeneratePeg3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="assignment2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="EE422C" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="assignment2" />
+      <option name="MAIN_CLASS_NAME" value="assignment2.GameTest" />
+      <option name="METHOD_NAME" value="testGeneratePeg3" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -744,19 +818,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.SortToolsTest.testFind" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.SelectionSortTest.test2" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.SelectionSortTest.test1" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.SelectionSortTest.test3" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Driver" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.SelectionSortTest.test3" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Driver" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.GameTest.testGeneratePeg" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.GameTest.testGeneratePeg2" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.GameTest.testGeneratePeg3" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Driver" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SelectionSortTest.test3" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SelectionSortTest.test2" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SelectionSortTest.test1" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.SortToolsTest.testFind" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.GameTest.testGeneratePeg3" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.GameTest.testGeneratePeg2" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.GameTest.testGeneratePeg" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SelectionSortTest.test3" />
       </list>
     </recent_temporary>
   </component>
@@ -789,30 +863,34 @@
       <workItem from="1474132511304" duration="509000" />
       <workItem from="1474144215731" duration="16000" />
       <workItem from="1474144274601" duration="21200000" />
+      <workItem from="1474225767128" duration="2012000" />
+      <workItem from="1474344354915" duration="269000" />
+      <workItem from="1474485280014" duration="2329000" />
+      <workItem from="1474487658513" duration="222000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SelectionSortTest_test1 - 2016.09.14 at 16h 10m 06s.xml">
-      <configuration name="SelectionSortTest.test1" configurationId="JUnit" />
+    <history-entry file="GameTest_testGeneratePeg - 2016.09.18 at 14h 28m 02s.xml">
+      <configuration name="GameTest.testGeneratePeg" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SelectionSortTest_test2 - 2016.09.14 at 16h 10m 08s.xml">
-      <configuration name="SelectionSortTest.test2" configurationId="JUnit" />
+    <history-entry file="GameTest_testGeneratePeg - 2016.09.18 at 14h 30m 55s.xml">
+      <configuration name="GameTest.testGeneratePeg" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SelectionSortTest_test3 - 2016.09.14 at 16h 04m 37s.xml">
-      <configuration name="SelectionSortTest.test3" configurationId="JUnit" />
+    <history-entry file="GameTest_testGeneratePeg - 2016.09.18 at 14h 32m 08s.xml">
+      <configuration name="GameTest.testGeneratePeg" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SelectionSortTest_test3 - 2016.09.14 at 16h 07m 04s.xml">
-      <configuration name="SelectionSortTest.test3" configurationId="JUnit" />
+    <history-entry file="GameTest_testGeneratePeg - 2016.09.18 at 14h 32m 44s.xml">
+      <configuration name="GameTest.testGeneratePeg" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SelectionSortTest_test3 - 2016.09.14 at 16h 07m 15s.xml">
-      <configuration name="SelectionSortTest.test3" configurationId="JUnit" />
+    <history-entry file="GameTest_testGeneratePeg2 - 2016.09.18 at 14h 36m 39s.xml">
+      <configuration name="GameTest.testGeneratePeg2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SelectionSortTest_test3 - 2016.09.14 at 16h 08m 43s.xml">
-      <configuration name="SelectionSortTest.test3" configurationId="JUnit" />
+    <history-entry file="GameTest_testGeneratePeg2 - 2016.09.18 at 14h 39m 00s.xml">
+      <configuration name="GameTest.testGeneratePeg2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SelectionSortTest_test3 - 2016.09.14 at 16h 08m 45s.xml">
-      <configuration name="SelectionSortTest.test3" configurationId="JUnit" />
+    <history-entry file="GameTest_testGeneratePeg3 - 2016.09.18 at 14h 42m 57s.xml">
+      <configuration name="GameTest.testGeneratePeg3" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SelectionSortTest_test3 - 2016.09.14 at 16h 09m 02s.xml">
       <configuration name="SelectionSortTest.test3" configurationId="JUnit" />
@@ -825,25 +903,25 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51048000" />
+    <option name="totallyTimeSpent" value="55880000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="23" width="1920" height="1057" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="832" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953367" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837838" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2818653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28108108" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953367" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14696486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19670959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -921,13 +999,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/assignment2/Game.java</url>
-          <line>97</line>
+          <line>102</line>
           <properties />
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/assignment2/Game.java</url>
-          <line>110</line>
+          <line>115</line>
           <properties />
           <option name="timeStamp" value="80" />
         </line-breakpoint>
@@ -941,33 +1019,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/assignment1/SortTools.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#6149#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment2/GameConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#369#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment1/SortToolsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -984,7 +1040,7 @@
         <state relative-caret-position="945">
           <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
           <folding>
-            <element signature="e#0#6149#0" expanded="true" />
+            <element signature="e#0#6149#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -993,9 +1049,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#369#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1003,9 +1057,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,7 +1074,7 @@
         <state relative-caret-position="945">
           <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
           <folding>
-            <element signature="e#0#6149#0" expanded="true" />
+            <element signature="e#0#6149#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1031,9 +1083,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1050,7 +1100,7 @@
         <state relative-caret-position="315">
           <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
           <folding>
-            <element signature="e#0#6149#0" expanded="true" />
+            <element signature="e#0#6149#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1059,9 +1109,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1078,7 +1126,7 @@
         <state relative-caret-position="465">
           <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
           <folding>
-            <element signature="e#0#6149#0" expanded="true" />
+            <element signature="e#0#6149#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1087,9 +1135,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1950">
           <caret line="130" column="47" selection-start-line="130" selection-start-column="47" selection-end-line="130" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1098,7 +1144,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#6149#0" expanded="true" />
+            <element signature="e#0#6149#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1107,9 +1153,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1118,7 +1162,7 @@
         <state relative-caret-position="1185">
           <caret line="89" column="5" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
           <folding>
-            <element signature="e#0#6149#0" expanded="true" />
+            <element signature="e#0#6149#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1127,9 +1171,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,7 +1180,7 @@
         <state relative-caret-position="1185">
           <caret line="89" column="5" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
           <folding>
-            <element signature="e#0#6149#0" expanded="true" />
+            <element signature="e#0#6149#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1147,9 +1189,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1158,7 +1198,7 @@
         <state relative-caret-position="1215">
           <caret line="89" column="5" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
           <folding>
-            <element signature="e#0#6149#0" expanded="true" />
+            <element signature="e#0#6149#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1167,9 +1207,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1095">
           <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1178,7 +1216,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#6149#0" expanded="true" />
+            <element signature="e#0#6149#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1187,9 +1225,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1230">
           <caret line="82" column="14" selection-start-line="82" selection-start-column="14" selection-end-line="82" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1198,7 +1234,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#6149#0" expanded="true" />
+            <element signature="e#0#6149#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1207,9 +1243,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1410">
           <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1225,7 +1259,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#6149#0" expanded="true" />
+            <element signature="e#0#6149#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1279,22 +1313,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment1/SortToolsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment1/SortTools.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="883">
           <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
           <folding>
-            <element signature="e#0#6149#0" expanded="true" />
+            <element signature="e#0#6149#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1303,9 +1327,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1329,7 +1350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1337,15 +1357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="82" column="30" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment2/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1353,7 +1364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1367,31 +1377,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment2/GameConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="105">
           <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#369#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment2/SecretCodeGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+        <state relative-caret-position="315">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding>
+            <element signature="e#367#368#0" expanded="false" />
+            <element signature="e#413#414#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment1/SortToolsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+          <folding>
+            <element signature="initializer##0;class#Object#0" expanded="false" />
+            <element signature="e#10065#10066#0" expanded="true" />
+            <element signature="e#10148#10149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment2/GameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment2/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment2/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

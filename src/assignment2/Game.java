@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class Game {
     private boolean isTesing;
-    private String[] code;
+    public String[] code;
     private int guessLeft;
     private static Scanner console = new Scanner(System.in);
     private boolean gameover = false;
@@ -21,14 +21,7 @@ public class Game {
 
     public void runGame(){
         printMessage();
-        String put = console.nextLine().toLowerCase();
-        if(!put.equals("y") && !put.equals("yes")){
-            System.out.println("Thank you!");
-            console.close();
-            System.exit(0);
-            return;
-        }
-        initGame();
+        askToStart();
         while(guessLeft > 0 || gameover){
             printNext();
         }
@@ -37,7 +30,9 @@ public class Game {
     private void initGame(){
         System.out.println("Generating secret code ....");
         code = SecretCodeGenerator.getInstance().getNewSecretCode().split("");
+        Board.clear();
         guessLeft = GameConfiguration.guessNumber;
+        gameover = false;
     }
 
     private void printMessage() {
@@ -54,17 +49,21 @@ public class Game {
 
     }
 
+    private void askToStart(){
+        String put = console.nextLine().toLowerCase();
+        if(!put.equals("y") && !put.equals("yes")){
+            System.out.println("Thank you!");
+            console.close();
+            System.exit(0);
+            return;
+        }
+        initGame();
+    }
+
     private void printNext(){
         if(gameover){
             System.out.print("Are you ready for another game (Y/N) : ");
-            String put = console.nextLine().toLowerCase();
-            if(!put.equals("y") && !put.equals("yes")){
-                System.out.println("Thank you!");
-                console.close();
-                System.exit(0);
-                return;
-            }
-            initGame();
+            askToStart();
             return;
         }
         System.out.println("You have " + guessLeft + " guesses left.");
@@ -74,7 +73,10 @@ public class Game {
         String guess = console.nextLine().toUpperCase();
         if(!validateGuess(guess)) {
             System.out.println(guess + " -> INVALID GUESS\n");
-        }else{
+        } else if (guess.equals("HISTORY")){
+            Board.print();
+        }
+        else{
             Peg feedback = generatePeg(guess);
             String msg;
             boolean win = false;
@@ -93,6 +95,9 @@ public class Game {
             } else {
                 msg = feedback.Black + " black peg"  + (feedback.Black > 1 ? "s" : "") + ", " + feedback.White + " white peg"  + (feedback.White > 1 ? "s" : "");
             }
+
+            Board.add(guess, feedback);
+
             System.out.println(guess + " -> Result: " + msg + "\n");
 
             guessLeft --;
@@ -106,7 +111,7 @@ public class Game {
         }
     }
 
-    private Peg generatePeg(String guess) {
+    public Peg generatePeg(String guess) {
         String[] guesses = guess.split("");
         Peg feedback = new Peg();
         int[] excludeCode = new int[GameConfiguration.pegNumber];
@@ -145,7 +150,10 @@ public class Game {
         return feedback;
     }
 
-    private boolean validateGuess(String guess) {
+    public boolean validateGuess(String guess) {
+        if(guess.equals("HISTORY")){
+            return true;
+        }
         if(guess.length() != GameConfiguration.pegNumber){
             return false;
         }
