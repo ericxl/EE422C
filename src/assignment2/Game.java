@@ -70,7 +70,7 @@ public class Game {
         System.out.println("What is your next guess?");
         System.out.println("Type in the characters for your guess and press enter.");
         System.out.print("Enter guess: ");
-        String guess = console.nextLine().toUpperCase();
+        String guess = console.nextLine().toUpperCase().trim();
         if(!validateGuess(guess)) {
             System.out.println(guess + " -> INVALID GUESS\n");
         } else if (guess.equals("HISTORY")){

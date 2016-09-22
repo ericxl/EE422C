@@ -69,4 +69,53 @@ public class GameTest {
         assertEquals(2, p4.Black);
         assertEquals(0, p4.White);
     }
+
+    @Test
+    public void testGeneratePegPiazza() {
+        testGame.code = new String[] {"G", "Y", "R", "G"};
+        Peg p1 = testGame.generatePeg("YGRG");
+        assertEquals(2, p1.Black);
+        assertEquals(2, p1.White);
+
+        testGame.code = new String[] {"R", "Y", "B", "G"};
+        Peg p2 = testGame.generatePeg("YRBG");
+        assertEquals(2, p2.Black);
+        assertEquals(2, p2.White);
+
+        Peg p3 = testGame.generatePeg("YBYY");
+        assertEquals(0, p3.Black);
+        assertEquals(2, p3.White);
+
+        Peg p4 = testGame.generatePeg("RRBB");
+        assertEquals(2, p4.Black);
+        assertEquals(0, p4.White);
+
+    }
+/*
+    @Test
+    public void testGenerate10() {
+        GameConfiguration.pegNumber = 10;
+        testGame.code = new String[] {"R", "R", "Y", "Y", "B", "B", "G", "G", "B", "R"};
+        Peg p1 = testGame.generatePeg("RRYYGGBBRY");
+        assertEquals(4, p1.Black);
+        assertEquals(5, p1.White);
+    }
+
+    @Test
+    public void testGenerate2() {
+        GameConfiguration.pegNumber = 2;
+        testGame.code = new String[] {"R", "Y"};
+        Peg p1 = testGame.generatePeg("YY");
+        assertEquals(1, p1.Black);
+        assertEquals(0, p1.White);
+    }
+
+    @Test
+    public void testGenerate6() {
+        GameConfiguration.pegNumber = 6;
+        testGame.code = new String[] {"R", "Y", "B", "G", "B", "B"};
+        Peg p1 = testGame.generatePeg("RBYYYG");
+        assertEquals(1, p1.Black);
+        assertEquals(3, p1.White);
+    }*/
 }
