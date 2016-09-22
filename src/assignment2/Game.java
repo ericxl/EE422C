@@ -29,7 +29,11 @@ public class Game {
 
     private void initGame(){
         System.out.println("Generating secret code ....");
-        code = SecretCodeGenerator.getInstance().getNewSecretCode().split("");
+        String secretCode = SecretCodeGenerator.getInstance().getNewSecretCode();
+        code = secretCode.split("");
+        if(isTesing){
+            System.out.println("\nSecret Code: " + secretCode + "\n");
+        }
         Board.clear();
         guessLeft = GameConfiguration.guessNumber;
         gameover = false;
