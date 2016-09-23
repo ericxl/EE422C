@@ -1,3 +1,8 @@
+/*  * EE422C Project 2 (Mastermind) submission by  * Replace <...> with your actual data.
+* Xiaoyong Liang
+* XL5432
+* Slip days used: <0>
+* Fall 2016  */
 package assignment2;
 
 import org.junit.Test;
@@ -69,7 +74,13 @@ public class GameTest {
         assertEquals(2, p4.Black);
         assertEquals(0, p4.White);
     }
-
+    @Test
+    public void testGeneratePeg4() {
+        testGame.code = new String[] {"R", "B", "Y", "R"};
+        Peg p1 = testGame.generatePeg("BBRG");
+        assertEquals(1, p1.Black);
+        assertEquals(1, p1.White);
+    }
     @Test
     public void testGeneratePegPiazza() {
         testGame.code = new String[] {"G", "Y", "R", "G"};
@@ -91,6 +102,7 @@ public class GameTest {
         assertEquals(0, p4.White);
 
     }
+
 /*
     @Test
     public void testGenerate10() {

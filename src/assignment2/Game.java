@@ -1,8 +1,10 @@
+/*  * EE422C Project 2 (Mastermind) submission by  * Replace <...> with your actual data.
+* Xiaoyong Liang
+* XL5432
+* Slip days used: <0>
+* Fall 2016  */
 package assignment2;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -74,7 +76,7 @@ public class Game {
         System.out.println("What is your next guess?");
         System.out.println("Type in the characters for your guess and press enter.");
         System.out.print("Enter guess: ");
-        String guess = console.nextLine().toUpperCase().trim();
+        String guess = console.nextLine().trim();
         if(!validateGuess(guess)) {
             System.out.println(guess + " -> INVALID GUESS\n");
         } else if (guess.equals("HISTORY")){
