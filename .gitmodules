@@ -1,0 +1,4 @@
+[submodule "src/assignment3"]
+	path = src/assignment3
+	url = git@github.com:KyleYue/Project3_WordLadder.git
+	branch = master
