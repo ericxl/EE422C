@@ -2,3 +2,7 @@
 	path = src/assignment3
 	url = git@github.com:KyleYue/Project3_WordLadder.git
 	branch = master
+[submodule "src/assignment4"]
+	path = src/assignment4
+	url = git@github.com:KyleYue/Project4_Critters.git
+	branch = master
