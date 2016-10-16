@@ -61,25 +61,21 @@ public class Sudoku {
     }
 
     public static boolean solve(SudokuBoard b, int current) {
-        // TODO fill here using recursion
-        // current increases from 0 to size^2 -1 -- first along a row, then
-        // downwards.
-        // IF the current placement is at square size^2, we are done.
-        // ELSE
-        // LOOP try out all 'size' numbers in the current square.
-        // IF any number is safe to place there
-        // Place it.
-        // Call solve with the next square without an initial value.
-        // IF above returns TRUE
-        // RETURN TRUE.
-        // ELSE
-        // Remove the placement, (and try the next possible digit)
-        // END LOOP
-        // RETURN false (if we fall out of the LOOP without returning true, we
-        // have exhausted 1-SIZE)
-        //
+        if(current == SIZE * SIZE) return true;
 
+        int rowNumber = current/SIZE;
+        int columnNumber = current % SIZE;
 
+        for (int i = 1; i <= SIZE; i++){
+            if(b.isSafe(i, current)){
+                b.board[rowNumber][columnNumber] = i;
+                if(solve(b, b.nextEmpty(current))){
+                    return true;
+                }else {
+                    b.board[rowNumber][columnNumber] = 0;
+                }
+            }
+        }
 
         return false;
     }
@@ -153,11 +149,17 @@ class SudokuBoard {
             }
         }
 
-        int subRow = N * (rowNumber /N);
-        int subCol = N * (colNumber / N);
-        
+        int startRow = N*(rowNumber /N );
+        int startCol = N*(colNumber / N);
+        for(int i = 0; i < N; i++){
+            for(int j = 0; j < N; j++){
+                if(board[startRow + i][startCol + j] == a){
+                    return false;
+                }
+            }
+        }
 
-        return false;
+        return true;
     }
 
     public void print() {
