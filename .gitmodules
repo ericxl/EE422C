@@ -6,3 +6,6 @@
 	path = src/assignment4
 	url = git@github.com:KyleYue/Project4_Critters.git
 	branch = master
+[submodule "src/assignment5"]
+	path = src/assignment5
+	url = git@github.com:KyleYue/Project5_Critter2.git
