@@ -9,3 +9,6 @@
 [submodule "src/assignment5"]
 	path = src/assignment5
 	url = git@github.com:KyleYue/Project5_Critter2.git
+[submodule "src/pMap"]
+	path = src/pMap
+	url = git@github.com:ericxl/ee422c-quiz6.git
