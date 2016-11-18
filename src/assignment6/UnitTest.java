@@ -54,5 +54,6 @@ public class UnitTest {
 
         // begin simulation
         List<Thread> threadList = bc.simulate();
+        assertEquals(5, threadList.size());
     }
 }

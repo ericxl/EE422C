@@ -4,19 +4,20 @@ package assignment6;
 import java.util.*;
 
 public class Theater {
-    private final Object lock = new Object();
     private int rows;
     private int seatsPerRow;
     private String showName;
     private boolean seats[][];
-    private ArrayList<Ticket> log;
+    private final ArrayList<Ticket> log = new ArrayList<>();
     public Theater(int numRows, int seatsPerRow, String show) {
         this.rows = numRows;
         this.seatsPerRow = seatsPerRow;
         this.showName = show;
-        synchronized (lock) {
-            this.seats = new boolean[numRows][seatsPerRow];
-            this.log = new ArrayList<>();
+        this.seats = new boolean[numRows][seatsPerRow];
+        for (int i = 0; i < numRows; i ++){
+            for (int j = 0; j < seatsPerRow; j ++){
+                seats[i][j] = false;
+            }
         }
     }
 
@@ -49,6 +50,7 @@ public class Theater {
         if (seat != null) {
             Ticket newTicket = new Ticket(showName, boxOfficeId, seat, client);
             System.out.println(newTicket.toString());
+            log.add(newTicket);
             return newTicket;
         } else {
             return null;
