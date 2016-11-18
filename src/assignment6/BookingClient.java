@@ -8,6 +8,7 @@ import assignment6.Theater.Seat;
 import assignment6.Theater.Ticket;
 
 public class BookingClient {
+    public int printDelay = 800;
 
     private static int clientIdCounter;
     private HashMap<String, Integer> office;
@@ -61,6 +62,9 @@ public class BookingClient {
                         if (soldOut) {
                             return;
                         }
+                        try {
+                            Thread.sleep(printDelay);
+                        } catch (Exception e) { }
                     }
 
                     Ticket newTicket;
@@ -78,9 +82,6 @@ public class BookingClient {
                             }
                             return;
                         }
-                        try {
-                            Thread.sleep(800);
-                        } catch (Exception e) { }
                     }
 
                     i++;
