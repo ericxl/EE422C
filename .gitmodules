@@ -12,3 +12,7 @@
 [submodule "src/pMap"]
 	path = src/pMap
 	url = git@github.com:ericxl/ee422c-quiz6.git
+[submodule "src/assignment7"]
+	path = src/assignment7
+	url = git@github.com:ericxl/Project7_ChatRoom.git
+	branch = master
